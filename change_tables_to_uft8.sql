@@ -1,0 +1,5 @@
+SELECT CONCAT("ALTER TABLE ",TABLE_SCHEMA,".",TABLE_NAME," CHARACTER SET utf8 COLLATE utf8_general_ci;   ",
+    "ALTER TABLE ",TABLE_SCHEMA,".",TABLE_NAME," CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;  ") 
+    AS alter_sql
+FROM information_schema.TABLES
+WHERE TABLE_SCHEMA = archivesspace;
